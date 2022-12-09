@@ -6,6 +6,7 @@ const pageThreeWoman = document.querySelector(".woman-page");
 const man = document.querySelector(".man");
 const woman = document.querySelector(".woman");
 const level = document.querySelector(".level-1");
+const pageThree = document.querySelector(".third-page")
 
 let position = 0;
 let counter = 1;
