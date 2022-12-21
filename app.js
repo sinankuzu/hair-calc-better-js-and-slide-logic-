@@ -7,8 +7,10 @@ const man = document.querySelector(".man");
 const woman = document.querySelector(".woman");
 const level = document.querySelector(".level-1");
 const pageThree = document.querySelector(".third-page");
-const total = document.querySelectorAll(".woman-page .images")
-
+const womanReceding = document.querySelector(".receding-hairline");
+const womanTonsure = document.querySelector(".tonsure");
+const womanLight = document.querySelector(".light-hair")
+const total = document.querySelectorAll(".woman-page .images div");
 let position = 0;
 let counter = 1;
 let levelPage = 75;
@@ -47,23 +49,37 @@ const next = (e) => {
         pageThreeWoman.classList.add("show");
         man.classList.remove("selected");
         pageThreeMan.classList.remove("show");
+        console.log(e.target.classList)
       }
       
     }
-
+ 
     if(counter == 3){
-        console.log("yes 3")
-          e.target.classList.add("selected");
-          const x = e.targer.classList;
-         
-          if(e.target.classList != x){
-            
+        console.log(e.target.className)
+         console.log(womanReceding.className)
+          if (e.target.className == "receding-hairline") {
+            womanReceding.classList.add("selected");
+            // womanTonsure.classList.remove("selected");
+            // womanLight.classList.remove("selected");
+            // console.log("gir");
+          } else if (e.target.classList === ".tonsure") {
+            womanTonsure.classList.add("selected");
+            womanReceding.classList.remove("selected");
+            womanLight.classList.remove("selected");
+            console.log("gir2");
+          } else if (e.target.classList === ".light-hair") {
+            womanLight.classList.add("selected");
+            womanReceding.classList.remove("selected");
+            womanTonsure.classList.remove("selected");
+            console.log("gir3");
           }
-          
+        
+
     }
 
 counter++;
- console.log(counter);
+console.log(counter)
+ 
 }
 
 // hide back button at the first page
@@ -105,5 +121,6 @@ woman.addEventListener("click", next)
 // recedingHairline.addEventListener("click", next);
 
 total.forEach((e)=>{
-    e.addEventListener("click",next)
+    e.addEventListener("click", next);
 })
+
