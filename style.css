@@ -102,19 +102,17 @@
   
 }
 .man-woman img {
-  margin: 10px;
-  position: relative;
-  bottom: 0;
+  margin:20px 10px;
+
   transition: 0.3s;
 }
 
 .man-woman img:hover {
-  bottom: 30px;
+ transform: translateY(-20px);
   transition: 0.3s;
 }
-
-.third-page{
-   
+.third-page h2 {
+  margin-bottom: 40px;
 }
 
 .third-page .images {
@@ -123,9 +121,7 @@
   gap: 20px;
 }
 
-.third-page h2 {
-  margin-bottom: 20px;
-}
+
 
 .selected {
   border: 5px solid white;
@@ -149,10 +145,34 @@
   transition: 0.3s;
 }
 
+.fourth-page{
+
+  width: 650px;
+
+}
+
+
+.fourth-page h2{
+  margin-bottom: 40px;
+  
+}
+
+.fourth-page .images{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.fourth-page img:hover{
+  transform:translateY(-20px);
+  transition: 0.3s;
+}
+
 .hide{
     display: none;
 }
 
 .show{
     display: block;
+    
 }

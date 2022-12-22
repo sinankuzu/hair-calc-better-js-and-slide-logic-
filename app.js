@@ -11,6 +11,8 @@ const womanReceding = document.querySelector(".receding-hairline");
 const womanTonsure = document.querySelector(".tonsure");
 const womanLight = document.querySelector(".light-hair");
 const womanProblem = document.querySelectorAll(".woman-page .images img");
+const manProblem = document.querySelectorAll(".man-page .images img");
+const durationProblem = document.querySelectorAll(".fourth-page img");
 let position = 0;
 let counter = 1;
 let levelPage = 75;
@@ -59,8 +61,30 @@ const next = (e) => {
     });
   }
 
+  manProblem.forEach((element) => {
+    if (e.target.classList == element.classList.value) {
+      element.classList.add("selected");
+    }
+    if (e.target.classList != element.classList.value) {
+      element.classList.remove("selected");
+    }
+  });
+
+  if (counter == 4) {
+    durationProblem.forEach((element) => {
+      if (e.target.classList == element.classList.value) {
+        element.classList.add("selected");
+      }
+      if (e.target.classList != element.classList.value) {
+        element.classList.remove("selected");
+      }
+    });
+  }
+
   counter++;
 };
+
+
 
 // hide back button at the first page
 
@@ -97,5 +121,13 @@ woman.addEventListener("click", next);
 // recedingHairline.addEventListener("click", next);
 
 womanProblem.forEach((e) => {
+  e.addEventListener("click", next);
+});
+
+manProblem.forEach((e) => {
+  e.addEventListener("click", next);
+});
+
+durationProblem.forEach((e) => {
   e.addEventListener("click", next);
 });
