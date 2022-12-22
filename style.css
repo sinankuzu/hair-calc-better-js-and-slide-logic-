@@ -154,7 +154,6 @@
 
 .fourth-page h2{
   margin-bottom: 40px;
-  
 }
 
 .fourth-page .images{
@@ -168,6 +167,13 @@
   transition: 0.3s;
 }
 
+.fifth-page .images{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
 .hide{
     display: none;
 }
@@ -175,4 +181,7 @@
 .show{
     display: block;
     
+}
+figcaption{
+  margin-top: 5px;
 }
